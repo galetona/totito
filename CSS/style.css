@@ -4,12 +4,17 @@ body{
   font-family: 'Josefin Sans', sans-serif;
 }
 
-/*Logo*/
-header{
-  text-align: center;
-}
 
 /*Encabezado*/
+header{
+  display: flex;
+  background-color: #00adef;
+}
+.logo{
+  max-height: 40%;
+  max-height: 30%:
+}
+
 nav li{
   display: inline;
   padding: 25px 1px 2px 1px;
@@ -34,7 +39,6 @@ li a{
 nav{
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  background-color: #00adef;
   text-align: center;
   margin-top: 20px;
 }
@@ -64,10 +68,10 @@ button{
   top: 45%;
   cursor: pointer;
 }
-.siguiente{
+.anterior{
   margin-left: 940px;
 }
-.anterior{
+.siguiente{
 
 }
 /**pie de página**/

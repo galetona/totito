@@ -1,23 +1,36 @@
-var contenido_noticias = document.getElementById('caja');
-var image = ['a', 'b', 'c', 'd', 'e']
-var i= image.length;
-var time= 1000;
-var e=0
 
-function siguienteImagen(){
-  if (i<image.length){
-    i=i+1;
-  }else {
-    i=1;
-    }
-    contenido_noticias.innerHTML = "<img src="+"Media/Fotos/"+image[i-1]+".png>";
+var index=1;
+function plusindex(n) {
+  index = index+1;
+  showimage(index);
   }
 
-  function anteriorImagen(){
-    if (i<image.length+1 && i>1){
-      i=i-1;
-    }else {
-      i=1;
-      }
-      contenido_noticias.innerHTML = "<img src="+"Media/Fotos/"+image[i-1]+".png>";
+  showimage (1);
+
+ function showimage(n){
+   var i;
+   var x = document.getElementsByClassName('cajas');
+   if (n > x.length){index = 1};
+   if (n < 1){index= x.length};
+    for (i=0; i<x.length; i++)
+    {
+      x[i].style.display= "none";
+
+    }
+      x[index-1].style.display= "block";
+   }
+
+   autoslide();
+   function autoslide(){
+     var i;
+     var x = document.getElementsByClassName('cajas');
+     for (i=0; i<x.length; i++)
+     {
+       x[i].style.display= "none";
+
+     }
+     if (index > x.length){index=1}
+       x[index-1].style.display= "block";
+       index++;
+       setTimeout(autoslide, 3000);
     }

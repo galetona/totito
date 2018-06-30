@@ -7,13 +7,12 @@
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-
+  </head>
+  <body>
 <!--Logo-->
   <header>
-    <img src="Media\Fotos\totito-logo_1.png">
-  </header>
-    </head>
-<body>
+    <img class="logo" src="Media\Fotos\totito-logo_1.png">
+
 <!-- Barra inicial -->
   <nav>
      <ul>
@@ -25,14 +24,19 @@
        <li><a href="#">Contacto</a></li>
      </ul>
    </nav>
+  </header>
 <!--Noticias-->
     <div id="noticias">
-      <div id="caja">
-        <img src="Media/Fotos/a.png">
+      <div id="contenedor">
+        <img class="cajas" src="Media/Fotos/1.png">
+        <img class="cajas" src="Media/Fotos/2.png">
+        <img class="cajas" src="Media/Fotos/3.png">
+        <img class="cajas" src="Media/Fotos/4.png">
+        <img class="cajas" src="Media/Fotos/5.png">
       </div>
 <!--botones de control de noticias-->
-      <button class= "anterior" onclick="siguienteImagen()"><</button>
-      <button class= "siguiente" onclick="anteriorImagen()">></button>
+      <button class="anterior"  onclick="plusindex(-1)" ><</button>
+      <button class="siguiente"  onclick="plusindex(1)">></button>
     </div>
 
   <script
